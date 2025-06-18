@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    /* Hover pseudo-class */
+    h3:hover {
+      color: rgb(216, 21, 21);
+      
+    }
+
+    a:active {
+      color: green;
+    }
+
+    /* Input focus */
+    input:focus {
+      border: 2px solid blue;
+      outline: none;
+    }
+
+    /* First paragraph only */
+    div p:first-child {
+      color:rgb(139, 63, 0);
+      font-weight: bold;
+    }
+
+    /* Even list items */
+    li:nth-child(even) {
+      background-color: #f0f0f0;
+    }
+
+    li:nth-child(odd) {
+      background-color: #d0f0ff;
+    }
+
+    /* Button hover */
+    button:hover {
+      background-color: rgb(140, 228, 121);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Pseudo-Class Examples</h2>
+ <div>
+    <p>This is the first paragraph.</p>
+  <p>This is the second paragraph.</p>
+ </div>
+  
+  <h3>Hover or click this link</h3><br><br>
+
+  <input type="text" placeholder="Focus me"><br><br>
+
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul><br>
+
+  <button>Hover over me</button>
+
+</body>
+</html>

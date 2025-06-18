@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .margin-area {
+      display: inline-block;
+      padding: 30px;
+      background-color: #ffd6d6;
+      position: relative;
+    }
+
+    .margin-area:hover::after {
+      content: "Margin";
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: red;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .border-area {
+      background-color: #d0f4de;
+      border: 2px dotted #0077b6;
+      padding: 20px;
+      position: relative;
+    }
+
+    .border-area:hover::after {
+      content: "Border";
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: blue;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .content-box {
+      background-color: #fff3b0;
+      padding: 10px;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .content-box:hover::after {
+      content: "Padding";
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: green;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2> CSS Box Model</h2>
+
+  <div class="margin-area">
+    <div class="border-area">
+      <div class="content-box">
+        Content Area
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

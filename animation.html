@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Animation Properties Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+
+    .box {
+      width: 200px;
+      height: 50px;
+      line-height: 50px;
+      margin: 20px auto;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    /* 1. animation-name */
+    .box1 {
+      background: lightblue;
+      animation-name: changeColor;
+      animation-duration: 2s;
+    }
+
+    @keyframes changeColor {
+      from { background-color: lightblue; }
+      to   { background-color: lightgreen; }
+    }
+
+    /* 2. animation-duration */
+    .box2 {
+      background: orange;
+      animation-name: growBox;
+      animation-duration: 3s;
+    }
+
+    @keyframes growBox {
+      from { width: 200px; }
+      to   { width: 300px; }
+    }
+
+    /* 3. animation-delay */
+    .box3 {
+      background: pink;
+      animation-name: fadeIn;
+      animation-duration: 2s;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+
+    /* 4. animation-iteration-count */
+    .box4 {
+      background: teal;
+      animation-name: bounce;
+      animation-duration: 1s;
+      animation-iteration-count: 3;
+    }
+
+    @keyframes bounce {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-30px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* 5. animation-timing-function */
+    .box5 {
+      background: salmon;
+      animation-name: slide;
+      animation-duration: 2s;
+      animation-timing-function: ease-in;
+    }
+
+    @keyframes slide {
+      from { transform: translateX(0); }
+      to   { transform: translateX(200px); }
+    }
+
+    /* 6. animation-direction */
+    .box6 {
+      background: violet;
+      animation-name: shift;
+      animation-duration: 1s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes shift {
+      from { transform: translateX(0); }
+      to   { transform: translateX(100px); }
+    }
+
+    /* 7. shorthand animation */
+    .box7 {
+      background: limegreen;
+      animation: spin 2s linear 1s infinite alternate;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(180deg); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>CSS Animation Properties Demo</h2>
+
+  <div class="box box1">animation-name</div>
+  <div class="box box2">animation-duration</div>
+  <div class="box box3">animation-delay</div>
+  <div class="box box4">iteration-count</div>
+  <div class="box box5">timing-function</div>
+  <div class="box box6">direction: alternate</div>
+  <div class="box box7">shorthand</div>
+
+</body>
+</html>
